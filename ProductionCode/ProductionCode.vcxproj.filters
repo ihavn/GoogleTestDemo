@@ -21,9 +21,15 @@
     <ClInclude Include="production.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="my_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="production.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="my_c.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

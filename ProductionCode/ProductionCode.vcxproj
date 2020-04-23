@@ -139,9 +139,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="hal.h" />
+    <ClInclude Include="my_c.h" />
     <ClInclude Include="production.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="my_c.c" />
     <ClCompile Include="production.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -36,6 +36,7 @@
     <IncludePath>C:\Users\Ib Havn\source\repos\GoogleTest\ProductionCode;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="..\ProductionCode\my_c.c" />
     <ClCompile Include="..\ProductionCode\production.c" />
     <ClCompile Include="productionTest.cpp" />
   </ItemGroup>
