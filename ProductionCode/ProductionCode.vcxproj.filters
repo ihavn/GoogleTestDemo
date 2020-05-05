@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="hal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="production.h">
       <Filter>Header Files</Filter>
     </ClInclude>

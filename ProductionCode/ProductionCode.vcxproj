@@ -18,6 +18,12 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="production.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="production.c" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{6773824B-27B5-45C9-903E-01D78BF83A46}</ProjectGuid>
@@ -137,13 +143,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="hal.h" />
-    <ClInclude Include="production.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="production.c" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
