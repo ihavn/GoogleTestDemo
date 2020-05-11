@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
 #include "../../fff/fff.h"
+#include <stdint.h>
 DEFINE_FFF_GLOBALS
 
 extern "C" {
