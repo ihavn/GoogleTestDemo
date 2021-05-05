@@ -78,12 +78,12 @@
     <ClInclude Include="..\..\..\..\..\..\Tmp\FreeRTOSv10.3.1\FreeRTOS\Source\include\timers.h">
       <Filter>FreeRTOS Source\Include</Filter>
     </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="myTask.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\..\Tmp\FreeRTOSv10.3.1\FreeRTOS\Source\portable\MemMang\heap_4.c">
@@ -112,6 +112,15 @@
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\..\Tmp\FreeRTOSv10.3.1\FreeRTOS\Source\timers.c">
       <Filter>FreeRTOS Source\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="myTaskOld.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myTask2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

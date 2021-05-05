@@ -34,6 +34,7 @@
     <ClInclude Include="..\..\..\..\..\..\Tmp\FreeRTOSv10.3.1\FreeRTOS\Source\portable\MSVC-MingW\portmacro.h" />
     <ClInclude Include="FreeRTOSConfig.h" />
     <ClInclude Include="myTask.h" />
+    <ClInclude Include="utils.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\..\..\Tmp\FreeRTOSv10.3.1\FreeRTOS\Source\croutine.c" />
@@ -46,7 +47,11 @@
     <ClCompile Include="..\..\..\..\..\..\Tmp\FreeRTOSv10.3.1\FreeRTOS\Source\tasks.c" />
     <ClCompile Include="..\..\..\..\..\..\Tmp\FreeRTOSv10.3.1\FreeRTOS\Source\timers.c" />
     <ClCompile Include="main.c" />
-    <ClCompile Include="myTask.c" />
+    <ClCompile Include="myTask2.c" />
+    <ClCompile Include="myTaskOld.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="utils.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -101,6 +106,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>C:\Tmp\FreeRTOSv10.3.1\FreeRTOS\Source\portable\MSVC-MingW;C:\Tmp\FreeRTOSv10.3.1\FreeRTOS\Source\include;C:\Users\Ib Havn\source\repos\GoogleTest\VIAFreeRTOS-Windows;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>D:\VIAUC\Programming\Under_Git_Control\FreeRTOS\FreeRTOS-submodule\FreeRTOS\Source;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

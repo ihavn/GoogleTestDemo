@@ -4,18 +4,17 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
-inline void myTaskFunction(void) {
-	vTaskDelay(pdMS_TO_TICKS(200));
-	puts("Hi from My Task");
-}
 // --------------------------------------------------------------------------------------
 void taskMyTask(void* pvParameters)
 {
 	// Remove compiler warnings.
 	(void)pvParameters;
 
+	// Initialisation code can be placed here
+
 	for (;;)
 	{
-		myTaskFunction();
+		vTaskDelay(pdMS_TO_TICKS(200));
+		// Do something meaningful here
 	}
 }

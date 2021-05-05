@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{618d165c-2208-48c2-87ed-e4c9c7b9bf80}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -33,14 +33,22 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Tmp\FreeRTOSv10.3.1\FreeRTOS\Source\portable\MSVC-MingW;C:\Tmp\FreeRTOSv10.3.1\FreeRTOS\Source\include;C:\Users\Ib Havn\source\repos\GoogleTest\VIAFreeRTOS-Windows;$(IncludePath)</IncludePath>
+    <IncludePath>D:\VIAUC\Programming\Under_Git_Control\C\GoogleTestDemo\VIAFreeRTOS-Windows;D:\VIAUC\Programming\Under_Git_Control\C\GoogleTestDemo\VIAFreeRTOSTest;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>D:\VIAUC\Programming\Under_Git_Control\C\GoogleTestDemo\VIAFreeRTOS-Windows;D:\VIAUC\Programming\Under_Git_Control\C\GoogleTestDemo\VIAFreeRTOSTest;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemGroup>
-    <ClCompile Include="..\VIAFreeRTOS-Windows\myTask.c" />
-    <ClCompile Include="VIAFreeRTOSTest.cpp" />
+    <ClCompile Include="..\VIAFreeRTOS-Windows\myTask2.c" />
+    <ClCompile Include="MyTaskTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FreeRTOS.h" />
+    <ClInclude Include="semphr.h" />
+    <ClInclude Include="task.h" />
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
@@ -64,7 +72,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>X64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>

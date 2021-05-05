@@ -1,22 +1,28 @@
+#include <stdint.h>
 #include "gtest/gtest.h"
 #include "../../fff/fff.h"
-#include <stdint.h>
+
 DEFINE_FFF_GLOBALS
 
 extern "C" {
-#include "hal.h"
-#include "production.h"
+#include <hal.h>
+#include <production.h>
+#include <my_utils.h>
 }
 
 // Create mocks for HAL functions
+FAKE_VALUE_FUNC(int8_t, bar, int8_t, int8_t); // int8_t util_add(int8_t n1, int8_t n2)
 FAKE_VOID_FUNC(hal_create, uint8_t);
 FAKE_VALUE_FUNC(int16_t, hal_getVoltage, uint8_t);
+FAKE_VALUE_FUNC(uint8_t, foo, uint8_t);    // uint8_t foo(uint8_t x)
 
 class ProductionTest : public ::testing::Test {
 protected:
 	void SetUp() override {
+		RESET_FAKE(bar);
 		RESET_FAKE(hal_create);
 		RESET_FAKE(hal_getVoltage);
+		RESET_FAKE(foo);
 		FFF_RESET_HISTORY();
 	}
 

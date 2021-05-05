@@ -1,18 +1,21 @@
 #include "gtest/gtest.h"
 #include "../../fff/fff.h"
-#include <stdint.h>
 DEFINE_FFF_GLOBALS
 
 extern "C" {
-#include <myTask.h>
-#include "FreeRTOS.h"
+#include <stdio.h>
+
+	// The simulated FreeRTOS header files belonging to the test project
+#include "FreeRTOS.h" 
 #include "task.h"
+
+	// Header file from the production code project
+#include <myTask.h>
 }
 
 // --- Create mocks for FreeRTOS functions ---
 // void vTaskDelay( const TickType_t xTicksToDelay );
-FAKE_VOID_FUNC(vTaskDelay, TickType_t);
-
+FAKE_VOID_FUNC(vTaskDelay,  TickType_t);
 
 class VIAFreeRTOSTest : public ::testing::Test {
 protected:
@@ -27,7 +30,7 @@ protected:
 TEST_F(VIAFreeRTOSTest, vTaskDelay_called) {
 	// Arrange
 	// Act
-	myTaskFunction();
+	myTask_run();
 	// Assert
 	EXPECT_EQ(1, vTaskDelay_fake.call_count);
 	EXPECT_EQ(pdMS_TO_TICKS(200), vTaskDelay_fake.arg0_val);

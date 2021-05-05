@@ -140,6 +140,7 @@
   <ItemGroup>
     <ClInclude Include="hal.h" />
     <ClInclude Include="production.h" />
+    <ClInclude Include="my_utils.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="production.c" />
