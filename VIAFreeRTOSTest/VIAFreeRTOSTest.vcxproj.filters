@@ -3,6 +3,9 @@
   <ItemGroup>
     <ClCompile Include="..\VIAFreeRTOS-Windows\myTask2.c" />
     <ClCompile Include="MyTaskTest.cpp" />
+    <ClCompile Include="..\VIAFreeRTOS-Windows\MySecondTask.c" />
+    <ClCompile Include="MySecondTaskTest.cpp" />
+    <ClCompile Include="FreeRTOS_FFF_MocksDefinitions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -25,5 +28,18 @@
     <ClInclude Include="semphr.h">
       <Filter>FreeRTOS\src</Filter>
     </ClInclude>
+    <ClInclude Include="queue.h">
+      <Filter>FreeRTOS\src</Filter>
+    </ClInclude>
+    <ClInclude Include="message_buffer.h">
+      <Filter>FreeRTOS\src</Filter>
+    </ClInclude>
+    <ClInclude Include="timers.h">
+      <Filter>FreeRTOS\src</Filter>
+    </ClInclude>
+    <ClInclude Include="event_groups.h">
+      <Filter>FreeRTOS\src</Filter>
+    </ClInclude>
+    <ClInclude Include="FreeRTOS_FFF_MocksDeclaration.h" />
   </ItemGroup>
 </Project>

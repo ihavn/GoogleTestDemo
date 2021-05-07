@@ -33,6 +33,7 @@
     <ClInclude Include="..\..\..\..\..\..\Tmp\FreeRTOSv10.3.1\FreeRTOS\Source\include\timers.h" />
     <ClInclude Include="..\..\..\..\..\..\Tmp\FreeRTOSv10.3.1\FreeRTOS\Source\portable\MSVC-MingW\portmacro.h" />
     <ClInclude Include="FreeRTOSConfig.h" />
+    <ClInclude Include="MySecondTask.h" />
     <ClInclude Include="myTask.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>
@@ -47,6 +48,7 @@
     <ClCompile Include="..\..\..\..\..\..\Tmp\FreeRTOSv10.3.1\FreeRTOS\Source\tasks.c" />
     <ClCompile Include="..\..\..\..\..\..\Tmp\FreeRTOSv10.3.1\FreeRTOS\Source\timers.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="MySecondTask.c" />
     <ClCompile Include="myTask2.c" />
     <ClCompile Include="myTaskOld.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>

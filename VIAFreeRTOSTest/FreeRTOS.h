@@ -2,6 +2,7 @@
 #include <stdint.h>
 
 #define pdMS_TO_TICKS(ms) (ms)
+#define portMAX_DELAY 0xFFFF
 
 #define configSTACK_DEPTH_TYPE int16_t
 typedef enum { running } eTaskState;

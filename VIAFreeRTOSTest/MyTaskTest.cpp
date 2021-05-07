@@ -1,14 +1,8 @@
 #include "gtest/gtest.h"
-#include "../../fff/fff.h"
-DEFINE_FFF_GLOBALS
+#include "FreeRTOS_FFF_MocksDeclaration.h"
 
 extern "C" {
 #include <stdio.h>
-
-	// The simulated FreeRTOS header files belonging to the test project
-#include "FreeRTOS.h" 
-#include "task.h"
-#include "semphr.h"
 
 	// Header file from the production code project
 #include <myTask.h>
@@ -22,12 +16,6 @@ FAKE_VOID_FUNC(utils_initialise);
 FAKE_VALUE_FUNC(int8_t, utils_add, int8_t, int8_t);
 // void utils_storeValue(int8_t value);
 FAKE_VOID_FUNC(utils_storeValue, int8_t);
-
-// --- Create mocks for FreeRTOS functions ---
-// void vTaskDelay( const TickType_t xTicksToDelay );
-FAKE_VOID_FUNC(vTaskDelay,  TickType_t);
-// BasetType_t xSemaphoreGive( SemaphoreHandle_t xSemaphore );
-FAKE_VALUE_FUNC(BaseType_t, xSemaphoreGive, SemaphoreHandle_t);
 
 // ---------------------------------------------------------------------
 class MyTaskTest : public ::testing::Test {

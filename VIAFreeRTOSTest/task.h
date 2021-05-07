@@ -1,7 +1,6 @@
 #pragma once
 #include "FreeRTOS.h"
 
-void vTaskDelay(const TickType_t xTicksToDelay);
 typedef void* TaskHandle_t;
 typedef void (*TaskFunction_t)(void*);
 typedef size_t TaskStatus_t;
@@ -25,8 +24,7 @@ void vTaskDelete(TaskHandle_t xTask);
 
 // Task Control
 void vTaskDelay(const TickType_t xTicksToDelay);
-void vTaskDelayUntil(TickType_t* pxPreviousWakeTime,
-    const TickType_t xTimeIncrement);
+void vTaskDelayUntil(TickType_t* pxPreviousWakeTime, const TickType_t xTimeIncrement);
 UBaseType_t uxTaskPriorityGet(TaskHandle_t xTask);
 void vTaskPrioritySet(TaskHandle_t xTask,
     UBaseType_t uxNewPriority);
@@ -36,6 +34,8 @@ BaseType_t xTaskResumeFromISR(TaskHandle_t xTaskToResume);
 BaseType_t xTaskAbortDelay(TaskHandle_t xTask);
 
 // Task Utilities
+TickType_t xTaskGetTickCount(void);
+
 UBaseType_t uxTaskGetSystemState(
     TaskStatus_t* const pxTaskStatusArray,
     const UBaseType_t uxArraySize,
