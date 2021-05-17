@@ -3,14 +3,11 @@
 
 extern "C" {
 #include <stdio.h>
-
 	// Header file from the production code project
 #include <MySecondTask.h>
 }
 
 // --- Create Mocks ---
-
-
 
 // ---------------------------------------------------------------------
 class MySecondTaskTest : public ::testing::Test {
