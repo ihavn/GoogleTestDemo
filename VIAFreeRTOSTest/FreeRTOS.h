@@ -3,6 +3,8 @@
 
 #define pdMS_TO_TICKS(ms) (ms)
 #define portMAX_DELAY 0xFFFF
+#define pdTRUE 1
+#define pdFALSE 0
 
 #define configSTACK_DEPTH_TYPE int16_t
 typedef enum { running } eTaskState;
