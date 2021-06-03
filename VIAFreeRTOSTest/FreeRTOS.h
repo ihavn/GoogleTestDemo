@@ -6,7 +6,9 @@
 #define pdTRUE 1
 #define pdFALSE 0
 
+#define configMINIMAL_STACK_SIZE 192
 #define configSTACK_DEPTH_TYPE int16_t
+
 typedef enum { running } eTaskState;
 
 typedef size_t TickType_t;
