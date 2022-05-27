@@ -11,7 +11,6 @@ extern "C" {
 #include "message_buffer.h"
 #include "event_groups.h"
 #include "timers.h"
-#include "portable.h"
 }
 
 // --- Declare mocks for FreeRTOS functions ---
@@ -158,8 +157,3 @@ DECLARE_FAKE_VALUE_FUNC(TickType_t, xTimerGetPeriod, TimerHandle_t);
 DECLARE_FAKE_VALUE_FUNC(TickType_t, xTimerGetExpiryTime, TimerHandle_t);
 // UBaseType_t uxTimerGetReloadMode(TimerHandle_t xTimer);
 DECLARE_FAKE_VALUE_FUNC(UBaseType_t, uxTimerGetReloadMode, TimerHandle_t);
-
-//portable.h
-DECLARE_FAKE_VALUE_FUNC(void*, pvPortMalloc, size_t);
-DECLARE_FAKE_VOID_FUNC(vPortFree, void*)
-
