@@ -145,7 +145,3 @@ DEFINE_FAKE_VALUE_FUNC(TickType_t, xTimerGetPeriod, TimerHandle_t);
 DEFINE_FAKE_VALUE_FUNC(TickType_t, xTimerGetExpiryTime, TimerHandle_t);
 // UBaseType_t uxTimerGetReloadMode(TimerHandle_t xTimer);
 DEFINE_FAKE_VALUE_FUNC(UBaseType_t, uxTimerGetReloadMode, TimerHandle_t);
-
-//portable.h
-DEFINE_FAKE_VALUE_FUNC(void*, pvPortMalloc, size_t);
-DEFINE_FAKE_VOID_FUNC(vPortFree, void*)
